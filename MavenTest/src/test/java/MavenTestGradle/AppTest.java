@@ -1,4 +1,4 @@
-package MavenProj;
+package MavenTestGradle;
 
 import static org.junit.Assert.assertTrue;
 

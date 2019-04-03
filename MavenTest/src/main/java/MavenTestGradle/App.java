@@ -1,4 +1,4 @@
-package MavenProj;
+package MavenTestGradle;
 
 /**
  * Hello world!
