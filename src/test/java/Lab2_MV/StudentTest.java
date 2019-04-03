@@ -1,11 +1,16 @@
 package Lab2_MV;
 
+import Lab2_MV.Domain.TemaLab;
 import Lab2_MV.Exceptions.ValidatorException;
 import Lab2_MV.Repository.XMLFileRepository.StudentXMLRepo;
+import Lab2_MV.Repository.XMLFileRepository.TemaLabXMLRepo;
 import Lab2_MV.Service.XMLFileService.StudentXMLService;
+import Lab2_MV.Service.XMLFileService.TemaLabXMLService;
 import Lab2_MV.Validator.StudentValidator;
+import Lab2_MV.Validator.TemaLabValidator;
 import org.junit.Before;
 import org.junit.Test;
+import org.w3c.dom.Element;
 
 import static junit.framework.TestCase.*;
 
@@ -13,12 +18,18 @@ public class StudentTest {
     StudentValidator studentValidator;
     StudentXMLRepo studentXMLRepo;
     StudentXMLService studentXMLService;
+    TemaLabValidator temaLabValidator;
+    TemaLabXMLRepo temaLabXMLRepo;
+    TemaLabXMLService temaLabXMLService;
 
     @Before
     public void setUp() {
         studentValidator = new StudentValidator();
         studentXMLRepo = new StudentXMLRepo(studentValidator,"StudentiXML_test.xml");
         studentXMLService = new StudentXMLService(studentXMLRepo);
+        temaLabValidator = new TemaLabValidator();
+        temaLabXMLRepo = new TemaLabXMLRepo(temaLabValidator, "TemaLab_test.xml");
+        temaLabXMLService = new TemaLabXMLService(temaLabXMLRepo);
     }
 
 
@@ -161,6 +172,33 @@ public class StudentTest {
             assertTrue(true);
         }
     }
+    @Test
+    public void testAddAssignment(){
+        String[] params={"1", "Tema 1", "3", "3","1"};
+//        TemaLab temaLab = new TemaLab(1, "Tema1", 3,4);
+        try {
+
+            temaLabXMLService.add(params);
+//            fail();
+        } catch (ValidatorException e) {
+            System.out.println(e.getMessage());
+            assertTrue(true);
+        }
+    }
+
+    @Test
+    public void testAddAssignment2()
+    {
+        String[] params={"2", "Tema 2", "4", "3"};
+        try {
+            temaLabXMLService.add(params);
+//            fail();
+        } catch (ValidatorException e) {
+            System.out.println(e.getMessage());
+            assertTrue(true);
+        }
+    }
+
 
     @Test
     public void testEmptyEmail() {
