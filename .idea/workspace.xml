@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e4453d8-eab6-4e82-8f5d-c46ac21c6755" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemaLab_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TemaLab_test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Lab2_MV/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Lab2_MV/StudentTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Lab2_MV/StudentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="176" column="48" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
+            <state relative-caret-position="190">
+              <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -147,7 +149,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-31" />
     <option name="y" value="180" />
     <option name="width" value="1936" />
@@ -307,7 +309,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554288230127" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554288311844" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15234375" />
@@ -326,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StudentTest.testAddAssignment2">
+  <component name="RunManager" selected="JUnit.StudentTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MavenTest" />
@@ -414,9 +416,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StudentTest" />
         <item itemvalue="JUnit.StudentTest.testAddAssignment2" />
         <item itemvalue="JUnit.StudentTest.testAddAssignment" />
-        <item itemvalue="JUnit.StudentTest" />
         <item itemvalue="JUnit.StudentTest.testTeacherName" />
         <item itemvalue="Application.Main" />
       </list>
@@ -436,15 +438,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StudentTest - 2019.04.03 at 12h 39m 25s.xml">
-      <configuration name="StudentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StudentTest - 2019.04.03 at 12h 39m 36s.xml">
-      <configuration name="StudentTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StudentTest - 2019.04.03 at 12h 39m 53s.xml">
-      <configuration name="StudentTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StudentTest_testAddAssignment - 2019.04.03 at 13h 14m 59s.xml">
       <configuration name="StudentTest.testAddAssignment" configurationId="JUnit" />
     </history-entry>
@@ -466,6 +459,15 @@
     <history-entry file="StudentTest_testAddAssignment2 - 2019.04.03 at 13h 42m 04s.xml">
       <configuration name="StudentTest.testAddAssignment2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StudentTest_testAddAssignment2 - 2019.04.03 at 13h 44m 48s.xml">
+      <configuration name="StudentTest.testAddAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StudentTest - 2019.04.03 at 13h 44m 53s.xml">
+      <configuration name="StudentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StudentTest - 2019.04.03 at 13h 45m 04s.xml">
+      <configuration name="StudentTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,7 +479,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-31" y="180" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1641791" />
@@ -660,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Lab2_MV/StudentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="176" column="48" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
+        <state relative-caret-position="190">
+          <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
         </state>
       </provider>
     </entry>

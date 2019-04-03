@@ -179,7 +179,7 @@ public class StudentTest {
         try {
 
             temaLabXMLService.add(params);
-//            fail();
+            fail();
         } catch (ValidatorException e) {
             System.out.println(e.getMessage());
             assertTrue(true);
@@ -189,10 +189,10 @@ public class StudentTest {
     @Test
     public void testAddAssignment2()
     {
-        String[] params={"", "Tema 2", "4", "2"};
+        String[] params={"0", "Tema 2", "4", "2"};
         try {
             temaLabXMLService.add(params);
-            fail();
+//            fail();
         } catch (ValidatorException e) {
             System.out.println(e.getMessage());
             assertTrue(true);
