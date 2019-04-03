@@ -174,7 +174,7 @@ public class StudentTest {
     }
     @Test
     public void testAddAssignment(){
-        String[] params={"1", "Tema 1", "3", "3","1"};
+        String[] params={"1", "Tema 1", "17", "2"};
 //        TemaLab temaLab = new TemaLab(1, "Tema1", 3,4);
         try {
 
@@ -189,10 +189,10 @@ public class StudentTest {
     @Test
     public void testAddAssignment2()
     {
-        String[] params={"2", "Tema 2", "4", "3"};
+        String[] params={"", "Tema 2", "4", "2"};
         try {
             temaLabXMLService.add(params);
-//            fail();
+            fail();
         } catch (ValidatorException e) {
             System.out.println(e.getMessage());
             assertTrue(true);
