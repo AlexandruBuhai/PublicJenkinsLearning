@@ -2,10 +2,13 @@ package Lab2_MV;
 
 import Lab2_MV.Domain.TemaLab;
 import Lab2_MV.Exceptions.ValidatorException;
+import Lab2_MV.Repository.XMLFileRepository.NotaXMLRepo;
 import Lab2_MV.Repository.XMLFileRepository.StudentXMLRepo;
 import Lab2_MV.Repository.XMLFileRepository.TemaLabXMLRepo;
+import Lab2_MV.Service.XMLFileService.NotaXMLService;
 import Lab2_MV.Service.XMLFileService.StudentXMLService;
 import Lab2_MV.Service.XMLFileService.TemaLabXMLService;
+import Lab2_MV.Validator.NotaValidator;
 import Lab2_MV.Validator.StudentValidator;
 import Lab2_MV.Validator.TemaLabValidator;
 import org.junit.Before;
@@ -22,6 +25,9 @@ public class StudentTest {
     TemaLabValidator temaLabValidator;
     TemaLabXMLRepo temaLabXMLRepo;
     TemaLabXMLService temaLabXMLService;
+    NotaXMLRepo notaXMLRepo;
+    NotaXMLService notaXMLService;
+    NotaValidator notaValidator;
 
     @Before
     public void setUp() {
@@ -31,6 +37,9 @@ public class StudentTest {
         temaLabValidator = new TemaLabValidator();
         temaLabXMLRepo = new TemaLabXMLRepo(temaLabValidator, "TemaLab_test.xml");
         temaLabXMLService = new TemaLabXMLService(temaLabXMLRepo);
+        notaValidator = new NotaValidator();
+        notaXMLRepo = new NotaXMLRepo(notaValidator, "NotaXML_test.xml");
+        notaXMLService = new NotaXMLService(notaXMLRepo);
     }
 
 
@@ -99,6 +108,7 @@ public class StudentTest {
         }
     }
 
+    //normal student test
     @Test
     public void testStudentName() {
         String[] params={"2079", "BuhaiAlexandru", "932", "asan@gmail.com", "Imre"};
@@ -106,10 +116,12 @@ public class StudentTest {
         try {
             studentXMLService.add(params);
 //            studentXMLService.add(params1);
-//            fail();
+            assertTrue(true);
+
         } catch (ValidatorException e) {
             System.out.println(e.getMessage());
-            assertTrue(true);
+            fail();
+
         }
     }
 
@@ -189,17 +201,18 @@ public class StudentTest {
         }
     }
 
-    //Test not working
+    //Normal test
     @Test
     public void testAddAssignment2()
     {
-        String[] params={"0", "Tema 2", "4", "2"};
+        String[] params={"1", "Tema 2", "4", "7"};
         try {
             temaLabXMLService.add(params);
-//            fail();
+            assertTrue(true);
+
         } catch (ValidatorException e) {
             System.out.println(e.getMessage());
-            assertTrue(true);
+            fail();
         }
     }
 
@@ -231,7 +244,7 @@ public class StudentTest {
         }
     }
 
-    //spapt invalid
+    //first week invalid
     @Test
     public void testAddAssignment5(){
         String[] params={"1", "Tema 2", "-1", "6"};
@@ -283,4 +296,80 @@ public class StudentTest {
             assertTrue(true);
         }
     }
+
+//      private Integer idNota;
+//    private String studentId;
+//    private Integer temaLabId;
+//    private double valoare;
+//    private LocalDateTime ldt;
+
+    @Test
+    public void testGrade(){
+        String[] params ={"12", "1", "1", "10", "2007-12-03T10:15:30"};
+        try{
+            notaXMLService.add(params);
+            assertTrue(true);
+        }
+        catch (ValidatorException e){
+            System.out.println(e.getMessage());
+            fail();
+        }
+    }
+
+    @Test
+    public void testBigBang()
+    {
+        try {
+            testAddAssignment2();
+            testGrade();
+            testStudentName();
+            assertTrue(true);
+
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            fail();
+
+        }
+
+    }
+    @Test
+    public void incrementalAddStudent()
+    {
+        try {
+            testStudentName();
+            assertTrue(true);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            fail();
+
+        }
+    }
+    @Test
+    public void incrementalAddAssignment()
+    {
+        try {
+            testStudentName();
+            testAddAssignment2();
+            assertTrue(true);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            fail();
+
+        }
+    }
+    @Test
+    public void incrementalAddGrade()
+    {
+        try {
+            testStudentName();
+            testAddAssignment2();
+            testGrade();
+            assertTrue(true);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            fail();
+
+        }
+    }
+
 }
