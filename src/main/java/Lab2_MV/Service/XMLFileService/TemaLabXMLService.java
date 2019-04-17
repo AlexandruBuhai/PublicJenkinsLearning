@@ -21,6 +21,7 @@ public class TemaLabXMLService extends AbstractXMLService<Integer,TemaLab>{
     }
     @Override
     protected TemaLab extractEntity(String[] params){
+
         return new TemaLab(Integer.parseInt(params[0]),params[1],Integer.parseInt(params[2]),Integer.parseInt(params[3]));
     }
 

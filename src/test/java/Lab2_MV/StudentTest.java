@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.w3c.dom.Element;
 
 import static junit.framework.TestCase.*;
+import static org.junit.Assert.assertTrue;
 
 public class StudentTest {
     StudentValidator studentValidator;
@@ -172,6 +173,8 @@ public class StudentTest {
             assertTrue(true);
         }
     }
+
+    //termen limita invalid
     @Test
     public void testAddAssignment(){
         String[] params={"1", "Tema 1", "17", "2"};
@@ -186,6 +189,7 @@ public class StudentTest {
         }
     }
 
+    //Test not working
     @Test
     public void testAddAssignment2()
     {
@@ -199,6 +203,47 @@ public class StudentTest {
         }
     }
 
+    //Descriere invalida
+    @Test
+    public void testAddAssignment3(){
+        String[] params={"1", null, "3", "6"};
+        try {
+
+            temaLabXMLService.add(params);
+            assertTrue(false);
+        } catch (ValidatorException e) {
+            System.out.println(e.getMessage());
+            assertTrue(true);
+        }
+    }
+
+    //Saptamana predarii invalida
+    @Test
+    public void testAddAssignment4(){
+        String[] params={"1", "Tema 2", "3", "-1"};
+        try {
+
+            temaLabXMLService.add(params);
+            assertTrue(false);
+        } catch (ValidatorException e) {
+            System.out.println(e.getMessage());
+//            assertTrue(true);
+        }
+    }
+
+    //spapt invalid
+    @Test
+    public void testAddAssignment5(){
+        String[] params={"1", "Tema 2", "-1", "6"};
+        try {
+
+            temaLabXMLService.add(params);
+            fail();
+        } catch (ValidatorException e) {
+            System.out.println(e.getMessage());
+            assertTrue(true);
+        }
+    }
 
     @Test
     public void testEmptyEmail() {
